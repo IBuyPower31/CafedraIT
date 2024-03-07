@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass/header/_header.scss","stylesheet.css"],"names":[],"mappings":"AAKA;EACI,iBAAA;ACJJ","file":"stylesheet.css","sourcesContent":["$black: #444;\r\n$red: #e42e2c;\r\n$white: #ffffff;\r\n$gray: #E7eaea;\r\n\r\nheader{\r\n    background: black;\r\n}","header {\n  background: black;\n}"]}
