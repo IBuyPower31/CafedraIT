@@ -1,0 +1,244 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="/stylesheet/stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <script src="/scripts/jquery-3.7.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/scripts/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <section id="menu" class="header-container">
+            <a href="index.html" class="logo">
+                <img src="/assets/logo.svg" title="" alt="">
+            </a>
+            <a href="/templates/novelty.html" class="header-links">Объявления</a>
+            <a href="/templates/method.html" class="header-links">Методический кабинет</a>
+            <a href="/templates/teachers.html" class="header-links">Преподаватели</a>
+            <a href="/templates/student.html" class="header-links active">Студенческая аудитория</a>
+            <a href="/templates/everything.html" class="header-links">Разное</a>
+        </section>
+
+        <!-- Условие проверки: Находимся ли мы в разделе "Студенческая аудитория". Если да - выводим данное меню -->
+        <section class="header-container-bottom">
+            <div class="header-bottom justify-content-center">
+                
+                <ul class="nav justify-content-center" id="method-tablist" role="tablist">
+                    <li class="nav-item">
+                        <!--<a href="https://t.bstu.ru/" id="plan-tab" class="nav-link active header-bottom-links" data-toggle="tab" role="tab" aria-controls="links" aria-selected="true">Расписание</a>-->
+                        <a href="https://t.bstu.ru/" id="plan-tab" class="nav-link header-bottom-links">Расписание</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#famous" id="famous-tab" class="nav-link active header-bottom-links" data-toggle="tab" role="tab" aria-controls="famous" aria-selected="true">Доска почета</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#glory" id="glory-tab" class="nav-link header-bottom-links" data-toggle="tab" role="tab" aria-controls="glory" aria-selected="false">Галерея славы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#coursework" id="coursework-tab" class="nav-link header-bottom-links" data-toggle="tab" role="tab" aria-controls="coursework" aria-selected="false">Курсовые и дипломы</a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>  
+
+    </header>
+
+    
+    
+    <section class="main method">
+        <div class="tab-content">
+
+            <!--<div id="plan" class="tab-pane fade show active method-content" role="tabpanel" aria-labelledby="plan-tab">
+                <h3 class="method-tab-title">Ссылки</h3>
+            </div>-->
+
+            <div id="famous" class="tab-pane fade show active method-content" role="tabpanel" aria-labelledby="famous-tab">
+                <h3 class="method-tab-title">Доска почета</h3>
+                <div class="famous-board">
+                    <img src="/assets/student/Stipendianty.jpg">
+                </div>
+            </div>
+
+            <div id="glory" class="tab-pane fade method-content" role="tabpanel" aria-labelledby="glory-tab">
+                <h3 class="method-tab-title">Галерея славы. Без лишних слов - Баев И.В., ИТ-201</h3>
+                
+            </div>
+
+            <div id="coursework" class="tab-pane fade method-content" role="tabpanel" aria-labelledby="coursework-tab">
+                <h3 class="method-tab-title">Темы и распределение <span>(2023)</span></h3>
+
+                <div class="coursework-year-wrapper">
+                    <div class="col-6 coursework-column">
+                        <div class="coursework-block row">
+                            <h4 class="coursework-block-title col-9">Темы дипломных проектов (бак)</h4>
+                            <div class="coursework-block-files col-3">
+                                <a href="">
+                                    <img src="/assets/method/pdf.png">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/method/docx.png">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="coursework-block row">
+                            <h4 class="coursework-block-title col-9">Темы курсовых проектов (бак)</h4>
+                            <div class="coursework-block-files col-3">
+                                <a href="">
+                                    <img src="/assets/method/pdf.png">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/method/docx.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 coursework-column">
+                        <div class="coursework-block row">
+                            <h4 class="coursework-block-title col-9">Темы дипломных проектов (маг)</h4>
+                            <div class="coursework-block-files col-3">
+                                <a href="">
+                                    <img src="/assets/method/pdf.png">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/method/docx.png">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="coursework-block row">
+                            <h4 class="coursework-block-title col-9">Темы курсовых проектов (маг)</h4>
+                            <div class="coursework-block-files col-3">
+                                <a href="">
+                                    <img src="/assets/method/pdf.png">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/method/docx.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="method-tab-title">Темы и распределение <span>(2022)</span></h3>
+
+                <div class="coursework-year-wrapper">
+                    <div class="col-6 coursework-column">
+                        <div class="coursework-block row">
+                            <h4 class="coursework-block-title col-9">Темы дипломных проектов (бак)</h4>
+                            <div class="coursework-block-files col-3">
+                                <a href="">
+                                    <img src="/assets/method/pdf.png">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/method/docx.png">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="coursework-block row">
+                            <h4 class="coursework-block-title col-9">Темы курсовых проектов (бак)</h4>
+                            <div class="coursework-block-files col-3">
+                                <a href="">
+                                    <img src="/assets/method/pdf.png">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/method/docx.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 coursework-column">
+                        <div class="coursework-block row">
+                            <h4 class="coursework-block-title col-9">Темы дипломных проектов (маг)</h4>
+                            <div class="coursework-block-files col-3">
+                                <a href="">
+                                    <img src="/assets/method/pdf.png">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/method/docx.png">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="coursework-block row">
+                            <h4 class="coursework-block-title col-9">Темы курсовых проектов (маг)</h4>
+                            <div class="coursework-block-files col-3">
+                                <a href="">
+                                    <img src="/assets/method/pdf.png">
+                                </a>
+                                <a href="">
+                                    <img src="/assets/method/docx.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+        
+    <footer>
+        <section class="footer-info">
+            <div class="footer-info-block">
+                <div class="title">
+                    Адрес: 
+                </div>
+                <div class="info">
+                    <p>Россия, г. Белгород, ул. Костюкова, 46;</p>
+                    <p>почтовый индекс: 308012;</p>
+                    <p>кабинет 418 ГК</p>
+                    <p>тел.:30-99-01, внутр.:1-4-91</p>
+                    <p>e-mail: kint@intbel.ru;</p>
+                    <p>web-master: lep@intbel.ru</p>
+                </div>
+            </div>
+            <div class="footer-info-block">
+                <div class="title">
+                    Заведующий кафедрой: 
+                </div>
+                <div class="info">
+                    <p>Старченко Денис Николаевич;</p>
+                    <p>каб. 512а главного корпуса;</p>
+                    <p>тел.: (4722) 30-99-30; (4722) 30-99-01;</p>
+                    <p>e-mail: starchenko.dn@bstu.ru;</p>
+                    <p>e-mail: kint@intbel.ru;</p>
+                    <p>telegram: @DenisNSt</p>
+                </div>
+            </div>
+            <div class="footer-photo">
+                <img src="/assets/DNS.png">
+            </div>
+        </section>
+        <div class="footer-social-block">
+            <a href="" class="social-net">
+                <img src="/assets/telegram.png">
+            </a>
+            <a href="" class="social-net">
+                <img src="/assets/vk.png">
+            </a>
+            <a href="" class="social-net">
+                <img src="/assets/youtube.png">
+            </a>
+        </div>
+        <div class="footer-bottom-line">
+            <div class="bottom-line-child"></div>
+            <div class="bottom-line-child">2024 BSTU. Все права защищены</div>
+            <div class="bottom-line-child"><img class="bstu-logo"></div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    
+</script>

@@ -1,0 +1,527 @@
+$white: #ffffff;
+$blue: #122d52;
+$active: #9a0b0b;
+$ocean-blue: #21ADE4;
+$black-text: #040404;
+// Минимальная ширина окна
+$main-min-height: 1000px;
+
+//Размеры фотографий преподавателей (соотношение 3:4)
+$employee-width: 300px;
+$employee-height: 400px;
+// Шрифты
+
+@font-face {
+    font-family: "PFCentro";
+    src: url('/fonts/PFCentroSlabPro-Regular.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/PFCentroSlabPro-Regular.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/fonts/PFCentroSlabPro-Regular.woff') format('woff2'), /* Modern Browsers */
+    url('/fonts/PFCentroSlabPro-Regular.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/PFCentroSlabPro-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: "PFCentroMedium";
+    src: url('/fonts/PFCentroSlabPro-Medium.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/PFCentroSlabPro-Medium.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/fonts/PFCentroSlabPro-Medium.woff') format('woff2'), /* Modern Browsers */
+    url('/fonts/PFCentroSlabPro-Medium.woff') format('woff'), /* Modern Browsers */
+    url('/fonts/PFCentroSlabPro-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: "PT Sans Bold";
+    src: url('/fonts/PT_Sans-Web-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: "PT Sans Regular";
+    src: url('/fonts/PT_Sans-Web-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+// Выставление правильного box-sizing
+*{
+    box-sizing: border-box;
+}
+
+// Общие стили для всех элементов
+body{
+    a{
+        text-decoration: none;
+    }
+}
+ 
+
+
+section.main{
+    background: url("/assets/default-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1000px;
+
+    // Главная
+    &.basic{
+        background:url("/assets/main-background.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        .main-text-form{
+            min-height: $main-min-height;
+            display: flex;
+            
+            p{
+                margin: 0 auto;
+                font-family: "PT Sans Bold" ;
+                color: $white;
+                font-size: 90px;
+                font-weight: 600;
+                max-width: 55%;
+                text-align: center;
+                white-space: break-spaces;
+    
+                span{
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    // Страница преподавателей
+    &.teachers{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 100px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+
+        .employees-block{
+            width: 100%;
+            
+
+            h3 {
+                color:$blue;
+                font-size: 40px;
+                text-align: center;
+                font-weight: 600;
+                line-height: 145%;
+                margin: 0;
+                text-transform: uppercase;
+                font-family: "PFCentroMedium";
+                margin-bottom: 30px;
+            }
+
+            .employees{
+                width: 80%;
+                border-radius: 10px;
+                background: white;
+                border: 3px solid #E7EAEA;
+                margin: 0 auto;
+                padding: 30px;
+
+                // В виде таблицы из двух колонок
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+
+                .employee{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+
+                    &-image{
+                        
+                        img{
+                            width: $employee-width;
+                            height: $employee-height;
+                            border-radius: 20px;
+                        }
+                    }
+
+                    &-wrapper{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        margin-left: 15px;
+
+                        p{
+                            margin: 0;
+                            font-weight: 400;
+
+                            &.surname{
+                                color: $ocean-blue;
+                                font-size: 32px;
+                                font-family: "PFCentroMedium";
+                                font-weight: 600;
+                            }
+                            
+                            &.name{
+                                color: $blue;
+                                font-size: 24px;
+                                font-family: "PFCentro" ;
+                                font-weight: 500;
+                                margin-bottom: 15px;
+                            }
+
+                            &.function, &.education, &.speciality{
+                                color: $black-text;
+                                font-family: "PFCentro";
+                                font-weight: 500;
+                                font-size: 20px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    $everything-width: 70%;
+
+    &.everything{
+        margin-bottom: 120px;
+        margin-top: 20px;
+
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            color: $blue;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 145%;
+            margin-bottom: 30px;
+            font-family: "PFCentroMedium";
+        }
+
+        .everything-video-grid{
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: $everything-width;
+        }
+
+        .everything-history-flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width:  $everything-width;
+            margin-left: auto;
+            margin-right: auto;
+            row-gap: 50px;
+
+            .history-block{
+                position: relative;
+                padding: 20px;
+                background-color: $white;
+                border: 2px solid #E7EAEA;
+                border-radius: 15px;
+
+                h3.history-title{
+                    color: $blue;
+                    font-family: "PFCentroMedium";
+                    font-weight: 500;
+                    font-size: 24px;
+                }
+
+                .history-date{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-radius: 0 15px 0 15px;
+                    background: $ocean-blue;
+                    color: $white;
+                    padding: 5px;
+                    
+                }
+
+                p{
+                    color: $black-text;
+                    font-family: "PFCentroMedium";
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 145%;
+                }
+            }
+            
+        }
+    }
+    
+
+    // Объявления
+    &.novelty{
+        margin-top: 120px;
+        margin-bottom: 120px;
+
+        .novelty-grid{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            
+            .novelty-block{
+                position: relative;
+                padding: 20px;
+                background-color: $white;
+                border: 2px solid #E7EAEA;
+                border-radius: 15px;
+
+                h3.novelty-title{
+                    color: $blue;
+                    font-family: "PFCentroMedium";
+                    font-weight: 500;
+                    font-size: 24px;
+                    margin-top: 0;
+                }
+
+                .novelty-date{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-radius: 0 15px 0 15px;
+                    background: $ocean-blue;
+                    color: $white;
+                    padding: 5px;
+                    margin-top: 0;
+                }
+
+                .novelty-wrapper{
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    column-gap: 30px;
+
+                    .novelty-image{
+
+                        img{
+                            border-radius: 15px;
+                            max-width: 300px;
+                        }
+                    }
+
+                    .novelty-content{
+
+
+                        p{
+                            color: $black-text;
+                            font-family: "PFCentroMedium";
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 145%;
+                            margin-top: 0;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                
+            }
+        }
+
+    }
+    
+
+    // Методический кабинет и студенческая аудитория
+    &.method{
+        margin-top: 30px;
+        margin-bottom: 120px;
+
+        .method-content{
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+
+            h3.method-tab-title{
+                text-transform: uppercase;
+                font-size: 40px;
+                font-family: "PFCentroMedium";
+                font-weight: 600;
+                text-align: center;
+                color: $blue;
+
+                span{
+                    font-weight: 400;
+                }
+            }
+
+            .method-column{
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+                margin-top: 30px;
+
+                .method-block{
+                    color: $black-text;
+                    border-radius: 15px;
+                    border: 2px solid #E7EAEA;
+                    box-shadow: 0px 0px 4px rgba(82, 82, 82, 0.3);
+                    background: $white;
+                    align-items: center;
+
+                    &:hover{
+                        color: $white;
+                        background: linear-gradient(to right, red 30%, $white 50%);
+                    }
+
+                    .method-title{
+                        font-size: 36px;
+                        font-family: "PFCentroMedium";
+                        font-weight: 400;
+                        line-height: 120%;
+                        padding: 15px 25px;
+
+
+                        
+                    }
+
+                    .method-files{
+                        padding: 15px;
+
+                        .method-files-grid{
+                            display: flex;
+                            flex-wrap: wrap;
+                            row-gap: 20px;
+
+                            .method-file{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                column-gap: 10px;
+
+                                a{
+                                    color: $black-text;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 117%;
+                                    font-family: "PFCentroMedium";
+
+                                    img{
+                                        width: 80px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .method-plan-column{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                row-gap: 50px;
+
+                .method-plan-block{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 20px;
+                    width: 100%;
+
+                    .method-plan-title{
+                        font-size: 36px;
+                        font-weight: 500;
+                        color: $blue;
+                        font-weight: 115%;
+                        font-family: "PFCentroMedium";
+                    }
+
+                    .method-plan-inner{
+                        width: 100%;
+                        margin-top: 20px;
+
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            // Студенческая аудитория
+            .famous-board{
+                width: 100%;
+
+                img{
+                    width: 100%;
+                    border-radius: 15px;
+                }
+            }
+
+            // Курсовые и дипломы
+
+            .coursework-year-wrapper{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                column-gap: 15px;
+                margin-top: 30px;
+                margin-bottom: 50px;
+
+                .coursework-column{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 20px;
+
+                    .coursework-block{
+                        display: flex;
+                        flex-direction: row;
+                        border-radius: 15px;
+                        border: 2px solid #E7EAEA;
+                        box-shadow: 0px 0px 4px rgba(82, 82, 82, 0.3);
+                        align-items: center;
+
+                        h4.coursework-block-title{
+                            color: $blue;
+                            padding: 15px 25px;
+                            font-family: "PFCentroMedium";
+                            margin: 0;
+                        }
+
+                        .coursework-block-files{
+                            padding: 15px 25px;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            background-color: $ocean-blue;
+                            border-radius: 0 15px 15px 0;
+                            justify-content: space-between;
+
+                            a{
+
+                                img{
+                                    width: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    
+}
+

@@ -1,0 +1,217 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="/stylesheet/stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <script src="/scripts/jquery-3.7.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/scripts/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <section id="menu" class="header-container">
+            <a href="index.html" class="logo">
+                <img src="/assets/logo.svg" title="" alt="">
+            </a>
+            <a href="/templates/novelty.html" class="header-links">Объявления</a>
+            <a href="/templates/method.html" class="header-links active">Методический кабинет</a>
+            <a href="/templates/teachers.html" class="header-links">Преподаватели</a>
+            <a href="/templates/student.html" class="header-links">Студенческая аудитория</a>
+            <a href="/templates/everything.html" class="header-links">Разное</a>
+        </section>
+
+        <!-- Условие проверки: Находимся ли мы в разделе "Методический кабинет". Если да - выводим данное меню -->
+        <section class="header-container-bottom">
+            <div class="header-bottom justify-content-center">
+                
+                <ul class="nav justify-content-center" id="method-tablist" role="tablist">
+                    <li class="nav-item">
+                        <a href="#links" id="links-tab" class="nav-link active header-bottom-links" data-toggle="tab" role="tab" aria-controls="links" aria-selected="true">Ссылки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#standard" id="standard-tab" class="nav-link header-bottom-links" data-toggle="tab" role="tab" aria-controls="standard" aria-selected="false">Госстандарты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#plan" id="plan-tab" class="nav-link header-bottom-links" data-toggle="tab" role="tab" aria-controls="plan" aria-selected="false">Учебные планы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#programm" id="programm-tab" class="nav-link header-bottom-links" data-toggle="tab" role="tab" aria-controls="programm" aria-selected="false">Рабочие программы</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a href="#examens" id="examens-tab" class="nav-link header-bottom-links" data-toggle="tab" role="tab" aria-controls="examens" aria-selected="false">Вопросы к экзаменам</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a href="#method" id="method-tab" class="nav-link header-bottom-links" data-toggle="tab" role="tab" aria-controls="method" aria-selected="false">Методические материалы</a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>  
+
+    </header>
+
+    
+    
+    <section class="main method">
+        <div class="tab-content">
+
+            <div id="links" class="tab-pane fade show active method-content" role="tabpanel" aria-labelledby="links-tab">
+                <h3 class="method-tab-title">Ссылки</h3>
+            </div>
+
+            <div id="standard" class="tab-pane fade method-content" role="tabpanel" aria-labelledby="standard-tab">
+                <h3 class="method-tab-title">Государственные стандарты</h3>
+            </div>
+
+            <div id="plan" class="tab-pane fade method-content" role="tabpanel" aria-labelledby="plan-tab">
+                <h3 class="method-tab-title">Учебные планы</h3>
+                <div class="method-plan-column">
+
+                    <div class="method-plan-block">
+                        <h3 class="method-plan-title">Учебный план специальности</h3>
+                        <h3 class="method-plan-title">09.03.02 - Информационные системы и технологии</h3>
+                        <div class="method-plan-inner"><img src="/assets/method/it.png"></div>
+                    </div>
+
+                    <div class="method-plan-block">
+                        <h3 class="method-plan-title">Учебный план специальности</h3>
+                        <h3 class="method-plan-title">09.03.03 - Прикладная информатика (в бизнесе)</h3>
+                        <div class="method-plan-inner"><img src="/assets/method/pi.png"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="programm" class="tab-pane fade method-content" role="tabpanel" aria-labelledby="programm-tab">
+                <h3 class="method-tab-title">Рабочие программы</h3>
+            </div>
+
+            <!--<div id="examens" class="tab-pane fade method-content" role="tabpanel" aria-labelledby="examens-tab">
+                <h3 class="method-tab-title">Экзаменационные вопросы по дисциплинам</h3>
+            </div>-->
+
+            <div id="method" class="tab-pane fade method-content" role="tabpanel" aria-labelledby="method-tab">
+                <h3 class="method-tab-title">Методические указания к выполнению лабораторных работ</h3>
+                <div class="method-column">
+
+                    <div class="method-block row">
+                        <div class="method-title col-6">
+                            Информатика
+                        </div>
+                        <div class="method-files col-6">
+                            <div class="method-files-grid">
+                                <div class="col-6 method-file">
+                                    <a href=""><img src="/assets/method/pdf.png"></a>
+                                    <a href="">Методические указания к выполнению лабораторных работ</a>
+                                </div>
+                                <div class="col-6 method-file">
+                                    <a href=""><img src="/assets/method/pdf.png"></a>
+                                    <a href="">Методические указания к выполнению лабораторных работ</a>
+                                </div>
+                                <div class="col-6 method-file">
+                                    <a href=""><img src="/assets/method/pdf.png"></a>
+                                    <a href="">Методические указания к выполнению лабораторных работ</a>
+                                </div>
+                                <div class="col-6 method-file">
+                                    <a href=""><img src="/assets/method/pdf.png"></a>
+                                    <a href="">Методические указания к выполнению лабораторных работ</a>
+                                </div>
+                                <div class="col-6 method-file">
+                                    <a href=""><img src="/assets/method/docx.png"></a>
+                                    <a href="">Курсовые работы</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="method-block row">
+                        <div class="method-title col-6">
+                            Теория информационных процессов и систем
+                        </div>
+                        <div class="method-files col-6">
+                            <div class="method-files-grid">
+                                <div class="col-6 method-file">
+                                    <a href=""><img src="/assets/method/winrar.png"></a>
+                                    <a href="">Методические указания к выполнению лабораторных работ</a>
+                                </div>
+                                <div class="col-6 method-file">
+                                    <a href=""><img src="/assets/method/winrar.png"></a>
+                                    <a href="">Методические указания к выполнению лабораторных работ</a>
+                                </div>
+                                <div class="col-6 method-file">
+                                    <a href=""><img src="/assets/method/winrar.png"></a>
+                                    <a href="">Методические указания к выполнению лабораторных работ</a>
+                                </div>
+                                <div class="col-6 method-file">
+                                    <a href=""><img src="/assets/method/docx.png"></a>
+                                    <a href="">Курсовые работы</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+        
+    <footer>
+        <section class="footer-info">
+            <div class="footer-info-block">
+                <div class="title">
+                    Адрес: 
+                </div>
+                <div class="info">
+                    <p>Россия, г. Белгород, ул. Костюкова, 46;</p>
+                    <p>почтовый индекс: 308012;</p>
+                    <p>кабинет 418 ГК</p>
+                    <p>тел.:30-99-01, внутр.:1-4-91</p>
+                    <p>e-mail: kint@intbel.ru;</p>
+                    <p>web-master: lep@intbel.ru</p>
+                </div>
+            </div>
+            <div class="footer-info-block">
+                <div class="title">
+                    Заведующий кафедрой: 
+                </div>
+                <div class="info">
+                    <p>Старченко Денис Николаевич;</p>
+                    <p>каб. 512а главного корпуса;</p>
+                    <p>тел.: (4722) 30-99-30; (4722) 30-99-01;</p>
+                    <p>e-mail: starchenko.dn@bstu.ru;</p>
+                    <p>e-mail: kint@intbel.ru;</p>
+                    <p>telegram: @DenisNSt</p>
+                </div>
+            </div>
+            <div class="footer-photo">
+                <img src="/assets/DNS.png">
+            </div>
+        </section>
+        <div class="footer-social-block">
+            <a href="" class="social-net">
+                <img src="/assets/telegram.png">
+            </a>
+            <a href="" class="social-net">
+                <img src="/assets/vk.png">
+            </a>
+            <a href="" class="social-net">
+                <img src="/assets/youtube.png">
+            </a>
+        </div>
+        <div class="footer-bottom-line">
+            <div class="bottom-line-child"></div>
+            <div class="bottom-line-child">2024 BSTU. Все права защищены</div>
+            <div class="bottom-line-child"><img class="bstu-logo"></div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    
+</script>

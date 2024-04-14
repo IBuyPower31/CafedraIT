@@ -1,0 +1,171 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="/stylesheet/stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <script src="/scripts/jquery-3.7.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/scripts/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <section id="menu" class="header-container">
+            <a href="index.html" class="logo">
+                <img src="/assets/logo.svg" title="" alt="">
+            </a>
+            <a href="/templates/novelty.html" class="header-links">Объявления</a>
+            <a href="/templates/method.html" class="header-links">Методический кабинет</a>
+            <a href="/templates/teachers.html" class="header-links">Преподаватели</a>
+            <a href="/templates/student.html" class="header-links">Студенческая аудитория</a>
+            <a href="/templates/everything.html" class="header-links active">Разное</a>
+        </section>
+
+        <!-- Условие проверки: Находимся ли мы в разделе "Разное". Если да - выводим данное меню -->
+        <section class="header-container-bottom">
+            <div class="header-bottom justify-content-center">
+                <ul class="nav justify-content-center" id="everything-tablist" role="tablist">
+                    <li class="nav-item">
+                        <a href="#letopis" id="letopis-tab" class="nav-link header-bottom-links" data-toggle="tab" role="tab" aria-controls="letopis" aria-selected="true">Летопись</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#video" id="video-tab" class="nav-link active header-bottom-links" data-toggle="tab" role="tab" aria-controls="video" aria-selected="false">Видео</a>
+                    </li>
+                </ul>
+            </div>
+        </section>  
+
+    </header>
+
+    
+    
+    <section class="main everything">
+        <div class="tab-content">
+            <div id="letopis" class="tab-pane fade show active" role="tabpanel" aria-labelledby="letopis-tab">
+                <h1>Летопись</h1>
+                <div class="everything-history-flex">
+                    <div class="history-block">
+                        <h3 class="history-title">Началась подготовка магистров</h3>
+                        <p class="history-date">01.09.2023</p>
+                        <!--Сюда можно вставлять HTML-контент -->
+                        <p>Приступили к занятиям более 10 магистрантов, обучающихся по направлению 09.04.02 -
+                            Информационные системы и технологии. Профиль подготовки - Разработка и сопровождение
+                            корпоративных информационных систем.
+
+                        </p>
+                    </div>
+                    <div class="history-block">
+                        <h3 class="history-title">Защита кандидатской диссертации М.А. Косоноговой</h3>
+                        <p class="history-date">02.06.2016</p>
+                        <!--Сюда можно вставлять HTML-контент -->
+                        <p>В Юго-Западном государственном университете (г. Курск) состоялась защита кандидатской
+                            диссертации преподавателя кафедры ИТ Косоноговой Марины Александровны. Диссертация
+                            кандидата технических наук на тему "Метод и средства управления образовательной
+                            траекторией в системах электронного обучения" защищена по научной специальности
+                            05.13.10 - Управление в социальных и экономических системах. Научный руководитель - 
+                            Иванов И.В.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="video" class="tab-pane fade" role="tabpanel" aria-labelledby="video-tab">
+                <h1>Записи защиты дипломов</h1>
+                <div class="everything-video-grid">
+                    <div class="video-block">
+                        <iframe width="600" height="320" 
+                            src="https://www.youtube.com/embed/wJpMlU-LLjk?si=iQ_T-30J91gmxHTu" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-block">
+                        <iframe width="600" height="320" 
+                            src="https://www.youtube.com/embed/wJpMlU-LLjk?si=iQ_T-30J91gmxHTu" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-block">
+                        <iframe width="600" height="320" 
+                            src="https://www.youtube.com/embed/wJpMlU-LLjk?si=iQ_T-30J91gmxHTu" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-block">
+                        <iframe width="600" height="320" 
+                            src="https://www.youtube.com/embed/wJpMlU-LLjk?si=iQ_T-30J91gmxHTu" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+
+    <footer>
+        <section class="footer-info">
+            <div class="footer-info-block">
+                <div class="title">
+                    Адрес: 
+                </div>
+                <div class="info">
+                    <p>Россия, г. Белгород, ул. Костюкова, 46;</p>
+                    <p>почтовый индекс: 308012;</p>
+                    <p>кабинет 418 ГК</p>
+                    <p>тел.:30-99-01, внутр.:1-4-91</p>
+                    <p>e-mail: kint@intbel.ru;</p>
+                    <p>web-master: lep@intbel.ru</p>
+                </div>
+            </div>
+            <div class="footer-info-block">
+                <div class="title">
+                    Заведующий кафедрой: 
+                </div>
+                <div class="info">
+                    <p>Старченко Денис Николаевич;</p>
+                    <p>каб. 512а главного корпуса;</p>
+                    <p>тел.: (4722) 30-99-30; (4722) 30-99-01;</p>
+                    <p>e-mail: starchenko.dn@bstu.ru;</p>
+                    <p>e-mail: kint@intbel.ru;</p>
+                    <p>telegram: @DenisNSt</p>
+                </div>
+            </div>
+            <div class="footer-photo">
+                <img src="/assets/DNS.png">
+            </div>
+        </section>
+        <div class="footer-social-block">
+            <a href="" class="social-net">
+                <img src="/assets/telegram.png">
+            </a>
+            <a href="" class="social-net">
+                <img src="/assets/vk.png">
+            </a>
+            <a href="" class="social-net">
+                <img src="/assets/youtube.png">
+            </a>
+        </div>
+        <div class="footer-bottom-line">
+            <div class="bottom-line-child"></div>
+            <div class="bottom-line-child">2024 BSTU. Все права защищены</div>
+            <div class="bottom-line-child"><img class="bstu-logo"></div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    
+</script>

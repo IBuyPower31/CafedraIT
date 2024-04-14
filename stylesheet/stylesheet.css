@@ -1,4 +1,551 @@
+@font-face {
+  font-family: "PFCentro";
+  src: url("/fonts/PFCentroSlabPro-Regular.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/PFCentroSlabPro-Regular.eot#iefix") format("embedded-opentype"), url("/fonts/PFCentroSlabPro-Regular.woff") format("woff2"), url("/fonts/PFCentroSlabPro-Regular.woff") format("woff"), url("/fonts/PFCentroSlabPro-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "PFCentroMedium";
+  src: url("/fonts/PFCentroSlabPro-Medium.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/PFCentroSlabPro-Medium.eot#iefix") format("embedded-opentype"), url("/fonts/PFCentroSlabPro-Medium.woff") format("woff2"), url("/fonts/PFCentroSlabPro-Medium.woff") format("woff"), url("/fonts/PFCentroSlabPro-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url("/fonts/PT_Sans-Web-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "PT Sans Regular";
+  src: url("/fonts/PT_Sans-Web-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
 header {
-  background: black;
+  display: flex;
+  flex-direction: column;
+}
+header .header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #ffffff;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+header .header-container .header-links {
+  color: #122d52;
+  font-weight: 600;
+  font-size: 24px;
+  font-family: "PFCentroMedium";
+}
+header .header-container .header-links.active {
+  color: #9a0b0b !important;
+}
+header .header-container .logo img {
+  width: 100px;
+  height: 100px;
+}
+header .header-container-bottom {
+  background: #122d52;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .header-container-bottom .header-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  background: #122d52;
+  margin: 0 auto;
+  align-items: center;
+  height: 20px;
+}
+header .header-container-bottom .header-bottom.active {
+  max-height: 75px;
+}
+header .header-container-bottom .header-bottom .header-bottom-links {
+  color: #ffffff;
+  font-family: "PFCentro";
+  font-size: 20px;
+  font-weight: 500;
+}
+header .header-container-bottom .header-bottom .header-bottom-links.active {
+  color: #8FDAFB;
+}
+
+footer .footer-info {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+footer .footer-info .footer-info-block {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-info .footer-info-block .title {
+  font-family: "PT Sans Bold";
+  color: #122d52;
+  font-size: 24px;
+}
+footer .footer-info .footer-info-block .info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-info .footer-info-block .info p {
+  font-size: 16px;
+  font-family: "PT Sans Regular";
+  margin: 0;
+  color: #122d52;
+}
+footer .footer-info .footer-photo {
+  border-radius: 50%;
+}
+footer .footer-info .footer-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+footer .footer-social-block {
+  width: 6%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+footer .footer-social-block a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+footer .footer-bottom-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+footer .footer-bottom-line .bottom-line-child {
+  font-family: "PT Sans Bold";
+  color: #122d52;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "PFCentro";
+  src: url("/fonts/PFCentroSlabPro-Regular.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/PFCentroSlabPro-Regular.eot#iefix") format("embedded-opentype"), url("/fonts/PFCentroSlabPro-Regular.woff") format("woff2"), url("/fonts/PFCentroSlabPro-Regular.woff") format("woff"), url("/fonts/PFCentroSlabPro-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "PFCentroMedium";
+  src: url("/fonts/PFCentroSlabPro-Medium.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/PFCentroSlabPro-Medium.eot#iefix") format("embedded-opentype"), url("/fonts/PFCentroSlabPro-Medium.woff") format("woff2"), url("/fonts/PFCentroSlabPro-Medium.woff") format("woff"), url("/fonts/PFCentroSlabPro-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url("/fonts/PT_Sans-Web-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "PT Sans Regular";
+  src: url("/fonts/PT_Sans-Web-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+* {
+  box-sizing: border-box;
+}
+
+body a {
+  text-decoration: none;
+}
+
+section.main {
+  background: url("/assets/default-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1000px;
+}
+section.main.basic {
+  background: url("/assets/main-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section.main.basic .main-text-form {
+  min-height: 1000px;
+  display: flex;
+}
+section.main.basic .main-text-form p {
+  margin: 0 auto;
+  font-family: "PT Sans Bold";
+  color: #ffffff;
+  font-size: 90px;
+  font-weight: 600;
+  max-width: 55%;
+  text-align: center;
+  white-space: break-spaces;
+}
+section.main.basic .main-text-form p span {
+  white-space: nowrap;
+}
+section.main.teachers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 100px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+section.main.teachers .employees-block {
+  width: 100%;
+}
+section.main.teachers .employees-block h3 {
+  color: #122d52;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 145%;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "PFCentroMedium";
+  margin-bottom: 30px;
+}
+section.main.teachers .employees-block .employees {
+  width: 80%;
+  border-radius: 10px;
+  background: white;
+  border: 3px solid #E7EAEA;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+section.main.teachers .employees-block .employees .employee {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+section.main.teachers .employees-block .employees .employee-image img {
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+}
+section.main.teachers .employees-block .employees .employee-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 15px;
+}
+section.main.teachers .employees-block .employees .employee-wrapper p {
+  margin: 0;
+  font-weight: 400;
+}
+section.main.teachers .employees-block .employees .employee-wrapper p.surname {
+  color: #21ADE4;
+  font-size: 32px;
+  font-family: "PFCentroMedium";
+  font-weight: 600;
+}
+section.main.teachers .employees-block .employees .employee-wrapper p.name {
+  color: #122d52;
+  font-size: 24px;
+  font-family: "PFCentro";
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+section.main.teachers .employees-block .employees .employee-wrapper p.function, section.main.teachers .employees-block .employees .employee-wrapper p.education, section.main.teachers .employees-block .employees .employee-wrapper p.speciality {
+  color: #040404;
+  font-family: "PFCentro";
+  font-weight: 500;
+  font-size: 20px;
+}
+section.main.everything {
+  margin-bottom: 120px;
+  margin-top: 20px;
+}
+section.main.everything h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #122d52;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 145%;
+  margin-bottom: 30px;
+  font-family: "PFCentroMedium";
+}
+section.main.everything .everything-video-grid {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 70%;
+}
+section.main.everything .everything-history-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  row-gap: 50px;
+}
+section.main.everything .everything-history-flex .history-block {
+  position: relative;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #E7EAEA;
+  border-radius: 15px;
+}
+section.main.everything .everything-history-flex .history-block h3.history-title {
+  color: #122d52;
+  font-family: "PFCentroMedium";
+  font-weight: 500;
+  font-size: 24px;
+}
+section.main.everything .everything-history-flex .history-block .history-date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 15px;
+  background: #21ADE4;
+  color: #ffffff;
+  padding: 5px;
+}
+section.main.everything .everything-history-flex .history-block p {
+  color: #040404;
+  font-family: "PFCentroMedium";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 145%;
+}
+section.main.novelty {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+section.main.novelty .novelty-grid {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+section.main.novelty .novelty-grid .novelty-block {
+  position: relative;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #E7EAEA;
+  border-radius: 15px;
+}
+section.main.novelty .novelty-grid .novelty-block h3.novelty-title {
+  color: #122d52;
+  font-family: "PFCentroMedium";
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 0;
+}
+section.main.novelty .novelty-grid .novelty-block .novelty-date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 15px;
+  background: #21ADE4;
+  color: #ffffff;
+  padding: 5px;
+  margin-top: 0;
+}
+section.main.novelty .novelty-grid .novelty-block .novelty-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+}
+section.main.novelty .novelty-grid .novelty-block .novelty-wrapper .novelty-image img {
+  border-radius: 15px;
+  max-width: 300px;
+}
+section.main.novelty .novelty-grid .novelty-block .novelty-wrapper .novelty-content p {
+  color: #040404;
+  font-family: "PFCentroMedium";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 145%;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+section.main.method {
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+section.main.method .method-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+section.main.method .method-content h3.method-tab-title {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: "PFCentroMedium";
+  font-weight: 600;
+  text-align: center;
+  color: #122d52;
+}
+section.main.method .method-content h3.method-tab-title span {
+  font-weight: 400;
+}
+section.main.method .method-content .method-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-top: 30px;
+}
+section.main.method .method-content .method-column .method-block {
+  color: #040404;
+  border-radius: 15px;
+  border: 2px solid #E7EAEA;
+  box-shadow: 0px 0px 4px rgba(82, 82, 82, 0.3);
+  background: #ffffff;
+  align-items: center;
+}
+section.main.method .method-content .method-column .method-block:hover {
+  color: #ffffff;
+  background: linear-gradient(to right, red 30%, #ffffff 50%);
+}
+section.main.method .method-content .method-column .method-block .method-title {
+  font-size: 36px;
+  font-family: "PFCentroMedium";
+  font-weight: 400;
+  line-height: 120%;
+  padding: 15px 25px;
+}
+section.main.method .method-content .method-column .method-block .method-files {
+  padding: 15px;
+}
+section.main.method .method-content .method-column .method-block .method-files .method-files-grid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+section.main.method .method-content .method-column .method-block .method-files .method-files-grid .method-file {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+section.main.method .method-content .method-column .method-block .method-files .method-files-grid .method-file a {
+  color: #040404;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 117%;
+  font-family: "PFCentroMedium";
+}
+section.main.method .method-content .method-column .method-block .method-files .method-files-grid .method-file a img {
+  width: 80px;
+}
+section.main.method .method-content .method-plan-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 50px;
+}
+section.main.method .method-content .method-plan-column .method-plan-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+section.main.method .method-content .method-plan-column .method-plan-block .method-plan-title {
+  font-size: 36px;
+  font-weight: 500;
+  color: #122d52;
+  font-weight: 115%;
+  font-family: "PFCentroMedium";
+}
+section.main.method .method-content .method-plan-column .method-plan-block .method-plan-inner {
+  width: 100%;
+  margin-top: 20px;
+}
+section.main.method .method-content .method-plan-column .method-plan-block .method-plan-inner img {
+  width: 100%;
+}
+section.main.method .method-content .famous-board {
+  width: 100%;
+}
+section.main.method .method-content .famous-board img {
+  width: 100%;
+  border-radius: 15px;
+}
+section.main.method .method-content .coursework-year-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+section.main.method .method-content .coursework-year-wrapper .coursework-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+section.main.method .method-content .coursework-year-wrapper .coursework-column .coursework-block {
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  border: 2px solid #E7EAEA;
+  box-shadow: 0px 0px 4px rgba(82, 82, 82, 0.3);
+  align-items: center;
+}
+section.main.method .method-content .coursework-year-wrapper .coursework-column .coursework-block h4.coursework-block-title {
+  color: #122d52;
+  padding: 15px 25px;
+  font-family: "PFCentroMedium";
+  margin: 0;
+}
+section.main.method .method-content .coursework-year-wrapper .coursework-column .coursework-block .coursework-block-files {
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #21ADE4;
+  border-radius: 0 15px 15px 0;
+  justify-content: space-between;
+}
+section.main.method .method-content .coursework-year-wrapper .coursework-column .coursework-block .coursework-block-files a img {
+  width: 50px;
 }
 /*# sourceMappingURL=stylesheet.css.map */
